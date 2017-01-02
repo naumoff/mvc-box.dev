@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title=" framework " version="2.8.5">
+  <partials/>
+  <file path="selfish.php" generated-path="selfish.html" hash="d34cc4f0b883f78858d9f37c877ecf97" package="TableCreation">
+    <docblock line="0">
+      <description>Created by PhpStorm.</description>
+      <long-description>User: andre
+Date: 02.10.2016</long-description>
+      <tag name="filesource" line="0" description=""/>
+      <tag name="package" line="0" description="TableCreation"/>
+      <tag name="link" line="0" description="see the usage following by this link" link="http://google.com"/>
+      <tag name="return" line="0" description="" type="false">
+        <type>false</type>
+      </tag>
+      <tag name="todo" line="0" description="to write description and check for mistakes."/>
+    </docblock>
+    <function namespace="" line="20" package="TableCreation">
+      <name>reading</name>
+      <full_name>\reading()</full_name>
+      <docblock line="20">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="20" description="TableCreation"/>
+      </docblock>
+    </function>
+    <parse_markers>
+      <error line="20" code="PPC:ERR-50011">No summary for function \reading()</error>
+    </parse_markers>
+    <source>eJxNj0FqxDAMRdc1+A5atlk4mVl0kQ60MHOAQtsDeBwlNnEsYysMpfTujQ0ls9BC+vp6X6fXaKMUbdNIAQ2cE2rGAa7f8G7jB1NaVBW+MqYedBgS1v6yrfXQHdWhU8fu8FyGVXgbncdMazK4z6I2s54QPvXVY2U4CrvsXZjBMse+bSeiyaMytEBGBLYIay7ekbynmwtTCcfWZSi2/UhCXlOAUft8R2YaCJjglhwjDJhNcrHQyy9gLJp5u5xgcZn1jFn9W0u1UkgxrsFUwxZ72PCPT1L8SPFwz3uR4vcPcThf8g==</source>
+  </file>
+  <file path="calculator.php" generated-path="calculator.html" hash="172a7990f296a589a9cbb4a92d69032d" package="Default">
+    <docblock line="0">
+      <description>file description: just a file. No OOP.</description>
+      <long-description>this is info about file - description section.</long-description>
+      <tag name="filesource" line="0" description=""/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <function namespace="" line="27" package="TableCreation">
+      <name>createTable</name>
+      <full_name>\createTable()</full_name>
+      <docblock line="27">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="27" description="TableCreation"/>
+        <tag name="package" line="27" description="TableCreation"/>
+        <tag name="param" line="27" description="&lt;p&gt;just describes type of wood&lt;/p&gt;" type="string" variable="$wood">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="27" description="&lt;p&gt;variable&lt;/p&gt;" type="null|string" variable="$nails">
+          <type>null</type>
+          <type>string</type>
+        </tag>
+        <tag name="return" line="27" description="default value is 1" type="integer">
+          <type>integer</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$wood</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$nails</name>
+        <default>null</default>
+        <type>null|string</type>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="27" code="PPC:ERR-50011">No summary for function \createTable()</error>
+    </parse_markers>
+    <source>eJxNUNtOAyEQfZaEf5gHk2qju+mrrbHGd+uDPzDLznZRFgiXGqP+u8Be2gQCw7lwZnZPtrec1es1Z1A2dFIRtOSFkzZIox/gI/oAWIAKXg0cDm/VQg+99JCX7gxgY2IYHe4vPcCTyOciK9J9JnoTnaBc15wtSUAo9NlUqOiTcNYkTnlrCVZVVQ8nUT9rOaCqUh+r7aXD3qLDAXxwUh/h+suYduxkzNWQh/BtCUwHGbvU6KjU7yzUKJWHEzqJjaJzeEchOp0iZscOowqJpCLlYWzONIviE48E71n94gjD1E5pt4u6DAZERqiQbkrWu/nnxxLnlrMfzq5I9GYCtkuZ6bmaEm3S/Y+zf5wfi0U=</source>
+  </file>
+  <file path="newOne.php" generated-path="newOne.html" hash="341263f745d555dc3517ff635d517fbc" package="FileSuper">
+    <docblock line="0">
+      <description>this file dedicated to global variables</description>
+      <long-description></long-description>
+      <tag name="sourcefile" line="0" description=""/>
+      <tag name="package" line="0" description="FileSuper"/>
+    </docblock>
+    <function namespace="" line="22" package="FileSuper">
+      <name>getRealDog</name>
+      <full_name>\getRealDog()</full_name>
+      <docblock line="22">
+        <description>function always return false.</description>
+        <long-description></long-description>
+        <tag name="package" line="22" description="FileSuper"/>
+        <tag name="param" line="22" description="&lt;p&gt;fake variable, please diregard&lt;/p&gt;" type="string" variable="$var">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="22" description="" type="boolean">
+          <type>boolean</type>
+        </tag>
+        <tag name="link" line="22" description="example of presentation" link="http:\\google.com"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$var</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="50" package="FileSuper">
+      <name>sourceExample</name>
+      <full_name>\sourceExample()</full_name>
+      <docblock line="50">
+        <description>this is very interestin function head.</description>
+        <long-description>this is longer description of this function</long-description>
+        <tag name="package" line="50" description="FileSuper"/>
+        <tag name="source" line="50" description=""/>
+        <tag name="todo" line="50" description="to complete class and write description"/>
+        <tag name="param" line="50" description="&lt;p&gt;var description&lt;/p&gt;" type="string" variable="$var">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="50" description="" type="boolean">
+          <type>boolean</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$var</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <markers>
+      <todo line="50">to complete class and write description</todo>
+    </markers>
+    <source>eJx9UsFO3DAQPRMp/zBCHOgKLeLQCxQBassHUKknLrPOxLHW67HGE1KE+u+1SbqbZVdIiRQ7M++9eW++3cUu1tXlYlFXsADtXILWeYKGGmdQqQFlsJ5X6OEFxeHKUyq17/X3iXsxVDrGc0SzRkvwmG9+9ZGkXF/W1Y7ifgJLKi5YODNCmeZ7h04gf+5YCnHqeAAX8o/IohPWXsstnA7a3p3ezDnaPhh1HAD9gK8pt2svAVr0iZY78REFN1shmTdXrGkr4AKiJ0zZCydkUZqxawJbMfsdlHdhDZ1qvH5+tszW09LwBugPbjIIcAtRKFFQLLqmQbYyLelTHv0H2/Mi40tdvdXVyVx1Hu/vnovOBhY6qmiOPHSoD4+9WZ/vg6r0h5hTMi4opJJd6fv9P42GkhEXZ/LPDotu4errexIfVio/LySvBZqyD5oj3UrsCJvlXqnnYEnmjMXAcTenrvn2wdV4Um64LE02PnuuBMZjSoChgUGcHoxwbAHKe1D2ib+jgp9jzJ+F9w9L4Q9I</source>
+  </file>
+  <file path="Animal.php" generated-path="Animal.html" hash="2c0e5025e9f054e69a2eec9509f76893" package="Default">
+    <docblock line="0">
+      <description>This is class heading</description>
+      <long-description>this is class description</long-description>
+      <tag name="filesource" line="0" description=""/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Model" line="23" package="Model">
+      <extends/>
+      <name>Model</name>
+      <full_name>\Model\Model</full_name>
+      <docblock line="23">
+        <description>Class Model</description>
+        <long-description>This is class that settles animal type</long-description>
+        <tag name="category" line="23" description="AnimalDefiner"/>
+        <tag name="package" line="23" description="Model"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="Model" line="27" package="Model">
+        <name>$animal</name>
+        <full_name>\Model\Model::animal</full_name>
+        <default></default>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="27" description="&lt;p&gt;sets animal type (like dog, cat etc...)&lt;/p&gt;" type="string|null" variable="">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="true" visibility="public" namespace="Model" line="32" package="Model">
+        <name>$pozer</name>
+        <full_name>\Model\Model::pozer</full_name>
+        <default></default>
+        <docblock line="32">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="32" description="" type="string|null" variable="$pozer">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Model" line="34" package="Model">
+        <name>__construct</name>
+        <full_name>\Model\Model::__construct()</full_name>
+        <docblock line="34">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$type</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Model" line="44" package="Model">
+        <name>_getAnimal</name>
+        <full_name>\Model\Model::_getAnimal()</full_name>
+        <docblock line="44">
+          <description>returns the name of animal type</description>
+          <long-description></long-description>
+          <tag name="return" line="44" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <markers>
+      <fixme line="46">need to fixe it!</fixme>
+    </markers>
+    <parse_markers>
+      <error line="34" code="PPC:ERR-50015">Argument $type is missing from the Docblock of __construct</error>
+      <error line="34" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="32" code="PPC:ERR-50007">No summary for property $pozer</error>
+    </parse_markers>
+    <source>eJx9kT1PwzAQhudEyn84pAwlgmbnG/EhMXRjYKuMc0msurZlXxAF+t+xXadRGJA83Xv3vs+dr25Nb4q8rqoihwpee+HAPy6Zc9Aja4TqghJVmqkNOm6FIaHVseOuFRKdHizHsVYXeZErtkVnGEdY6QblZaiNmQ/RLdaPPnMO6hmBQyLvDUyJLZNAO4NTLGeEnbY7uI/qI7ZCoZ10H71hHU4pkYpPyfBd5FkkykL/B7PgyPrlf9QgZQifJcNCig1Co7sz8NmAxJfL5Wmc9taZGd6l4FAeRvy62b/2pdFfATdNO2Lkp0eTKCaPVGsHxcPhYb3mWnmrgdOiDGSBIeySleG3zm8S9DVENbjs5zQWabAqHBkhfBPodn7jDEbsQ2si/7vrhNQhHb5hcYSp6+eXt9XTBSjEBkhDKz4RBJ0EMdnOgBPo/heOu77K</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="FileSuper" full_name="FileSuper"/>
+  <package name="Model" full_name="Model"/>
+  <package name="TableCreation" full_name="TableCreation"/>
+  <package name="global" full_name="global"/>
+  <namespace name="global" full_name="global"/>
+  <namespace name="Model" full_name="Model"/>
+  <deprecated count="0"/>
+</project>

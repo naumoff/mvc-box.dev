@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title><b>MVC</b> framework <b>1.0</b></title>
+    <parser>
+        <target>logs\parser\</target>
+        <encoding>utf-8</encoding>
+        <markers>
+            <item>TODO</item>
+            <item>FIXME</item>
+        </markers>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+    </parser>
+    <transformer>
+        <target>logs\output\</target>
+    </transformer>
+    <logging>
+        <level>debug</level>
+        <paths>
+            <default>C:\WEBDEV\OpenServer\domains\ProjectBox\mvc.dev\logs\{DATE}.phpdoc.log</default>
+            <errors>C:\WEBDEV\OpenServer\domains\ProjectBox\mvc.dev\logs\{DATE}.phpdoc_errors.log</errors>
+        </paths>
+    </logging>
+    <transformations>
+        <template name="new-black"/>
+    </transformations>
+    <files>
+        <directory>App</directory>
+        <directory>Core</directory>
+        <directory>Public</directory>
+        <ignore>logs\*</ignore>
+        <ignore>vendor\*</ignore>
+    </files>
+</phpdoc>

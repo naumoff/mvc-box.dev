@@ -1,0 +1,16 @@
+{
+  "name": "vendor_name/package_name",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Andrey Naumoff",
+      "email": "andrey.naumoff@gmail.com"
+    }
+  ],
+  "require": {
+    "phpdocumentor/phpdocumentor": "2.*",
+    "graphp/graphviz": "v0.2.1"
+  }
+}
