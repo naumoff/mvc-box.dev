@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * Front Controller.
+ * Front controller (public folder)
+ * @filesource
+ */
+
+/**
+ * Routing
+ */
+
+require '../Core/Router.php';
+
+$router = new \Core\Router();
+
+// add routes section $routerObject-&gt;addRoute($url,$params)
+// precise patterns
+$router-&gt;addRoute('', ['controller'=&gt;'Home','action'=&gt;'index']);
+$router-&gt;addRoute('posts',['controller'=&gt;'Posts','action'=&gt;'index']);
+$router-&gt;addRoute('posts/new', ['controller'=&gt;'Posts','action'=&gt;'new']);
+
+// route patters
+$router-&gt;addRoute('{controller}/{action}');
+$router-&gt;addRoute('{controller}/{action}/{id:\d+}');
+$router-&gt;addRoute('admin/{controller}/{action}');
+
+//setting the current $url
+$url = $_SERVER['QUERY_STRING'];
+
+if($router-&gt;matchURL($url)){
+	$router-&gt;getParams();
+	echo &quot;&lt;pre&gt;&quot;;
+	echo &quot;params found for current {$url}\n&quot;;
+	print_r($router-&gt;getParams());
+}else{
+	echo &quot;No route found for {$url} request&quot;;
+}
+
+// display routing table
+echo &quot;&lt;pre&gt;&quot;;
+echo &quot;\n*******************************\n&quot;;
+print_r($router-&gt;getRoutes());
+echo &quot;&lt;/pre&gt;&quot;;
+
+//echo get_class($router);
+//
+//echo &quot;&lt;pre&gt;&quot;;
+//print_r($_SERVER);
+//echo &quot;&lt;/pre&gt;&quot;;</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

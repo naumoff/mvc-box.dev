@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * Central Router Class for MVC framework.
+ */
+
+namespace Core;
+
+/**
+ * Class Router
+ * @package Core
+ */
+
+class Router {
+	
+	/**
+	 * @var array $routes Assotiative array of routes
+	 */
+	protected $routes = [];
+	
+	/**
+	 * @var array $params Parameters from matched route.
+	 */
+	protected $params = [];
+	
+	/**
+	 * function that created regEx pattern for routing table.
+	 * @param string $route The Route URL
+	 * @param array $params Parameters (controllers, actions, etc)
+	 * @return void
+	 */
+	public function addRoute($route,$params = [])
+	{
+		//transform $route to RegExp pattern
+		//replace '/' to '\/' in '{controller}/{action}/{id:\d+}'
+		$pattern = '/\//';
+		$replacement = '\\/';
+		$route = preg_replace($pattern, $replacement, $route);
+		
+		// transform to (?P&lt;controller&gt;[a-z-]+)\/(?P&lt;action&gt;[a-z-]+)\/{id:\d+}
+		$pattern = '/\{([a-z-]+)\}/';
+		$replacement = '(?P&lt;\1&gt;[a-z-]+)';
+		$route = preg_replace($pattern, $replacement, $route);
+		
+		// transform to (?P&lt;controller&gt;[a-z-]+)\/(?P&lt;action&gt;[a-z-]+)\/(?P&lt;id&gt;\d+)
+		$pattern = '/\{([a-z-]+):([^\}]+)\}/';
+		$replacement = '(?P&lt;\1&gt;\2)';
+		$route = preg_replace($pattern, $replacement, $route);
+		
+		$route = '/^' .$route. '$/i';
+		
+		$this-&gt;routes[$route]=$params;
+	}
+	
+	/**
+	 * Get all routes from routing table
+	 * @return array
+	 */
+	public function getRoutes()
+	{
+		return $this-&gt;routes;
+	}
+	
+	/**
+	 * Match the url to the routes in the routing table, setting the $params
+	 * property if a url is found in routing table
+	 * @param  string $url The route URL
+	 * @return bool TRUE if match found OR FALSE otherwise
+	 */
+	public function matchURL($url)
+	{
+		foreach ($this-&gt;routes AS $route=&gt;$params){
+			if(preg_match($route, $url, $matches)){
+				foreach ($matches as $key=&gt;$match) {
+					if(is_string($key)){
+						$params[$key]=$match;
+					}
+				}
+				$this-&gt;params = $params;
+				return TRUE;
+			}
+		}
+		return FALSE;
+	}
+	
+	/**
+	 * method 'dispatch' creates controller object and call for controller object's method
+	 *
+	 * method dispatch take url and convert it to class name and its method name, then
+	 * creates object based on class name and call its method from created object
+	 * @param string $url web path
+	 * @return void
+	 */
+	public function dispatch($url)
+	{
+		if($this-&gt;matchURL($url)){
+			$controller = $this-&gt;params['controller'];
+			$controller = $this-&gt;convertToStudlyCaps($controller);
+			if(class_exists($controller)){
+				$controllerObject = new $controller();
+				
+				$action = $this-&gt;params['action'];
+				$action = $this-&gt;convertToCamelCase($action);
+				if(is_callable([$controllerObject,$action])){
+					$controllerObject-&gt;$action();
+				}else{
+					echo &quot;Method {$action} in Controller {$controller} not found!&quot;;
+				}
+			}else{
+				echo &quot;Controller class {$controller} not found!&quot;;
+			}
+		}else{
+			echo 'No route matched!';
+		}
+	}
+	
+	/**
+	 * function converts camel-case to CamelCase.
+	 * used to convert url path to Controller Class name
+	 * @param string $string
+	 * @return string returns Controller Class Name
+	 *
+	 */
+	protected function convertToStudlyCaps($string)
+	{
+		$string = str_replace('-', ' ', $string);
+		$string = ucwords($string);
+		$string = str_replace(' ', '', $string);
+		return $string;
+	}
+	
+	/**
+	 * function converts camel-case to camelCale.
+	 * used to convert url path to Controler Action name (methods)
+	 * @param $string
+	 * @return string returns Controller Action (method) name
+	 */
+	protected function convertToCamelCase($string)
+	{
+		$string = $this-&gt;convertToStudlyCaps($string);
+		$string = lcfirst($string);
+		return $string;
+	}
+	
+	/**
+	 * Get the currently matched parameters (controller,action)
+	 * @return array $params
+	 */
+	public function getParams()
+	{
+		return $this-&gt;params;
+	}
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

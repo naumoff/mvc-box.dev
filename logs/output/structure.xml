@@ -1,214 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title=" framework " version="2.8.5">
   <partials/>
-  <file path="selfish.php" generated-path="selfish.html" hash="d34cc4f0b883f78858d9f37c877ecf97" package="TableCreation">
+  <file path="Core\Router.php" generated-path="Core.Router.html" hash="22c9153d5dbd5bcbd35866d07058468d" package="Default">
     <docblock line="0">
-      <description>Created by PhpStorm.</description>
-      <long-description>User: andre
-Date: 02.10.2016</long-description>
-      <tag name="filesource" line="0" description=""/>
-      <tag name="package" line="0" description="TableCreation"/>
-      <tag name="link" line="0" description="see the usage following by this link" link="http://google.com"/>
-      <tag name="return" line="0" description="" type="false">
-        <type>false</type>
-      </tag>
-      <tag name="todo" line="0" description="to write description and check for mistakes."/>
-    </docblock>
-    <function namespace="" line="20" package="TableCreation">
-      <name>reading</name>
-      <full_name>\reading()</full_name>
-      <docblock line="20">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="20" description="TableCreation"/>
-      </docblock>
-    </function>
-    <parse_markers>
-      <error line="20" code="PPC:ERR-50011">No summary for function \reading()</error>
-    </parse_markers>
-    <source>eJxNj0FqxDAMRdc1+A5atlk4mVl0kQ60MHOAQtsDeBwlNnEsYysMpfTujQ0ls9BC+vp6X6fXaKMUbdNIAQ2cE2rGAa7f8G7jB1NaVBW+MqYedBgS1v6yrfXQHdWhU8fu8FyGVXgbncdMazK4z6I2s54QPvXVY2U4CrvsXZjBMse+bSeiyaMytEBGBLYIay7ekbynmwtTCcfWZSi2/UhCXlOAUft8R2YaCJjglhwjDJhNcrHQyy9gLJp5u5xgcZn1jFn9W0u1UkgxrsFUwxZ72PCPT1L8SPFwz3uR4vcPcThf8g==</source>
-  </file>
-  <file path="calculator.php" generated-path="calculator.html" hash="172a7990f296a589a9cbb4a92d69032d" package="Default">
-    <docblock line="0">
-      <description>file description: just a file. No OOP.</description>
-      <long-description>this is info about file - description section.</long-description>
-      <tag name="filesource" line="0" description=""/>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <function namespace="" line="27" package="TableCreation">
-      <name>createTable</name>
-      <full_name>\createTable()</full_name>
-      <docblock line="27">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="27" description="TableCreation"/>
-        <tag name="package" line="27" description="TableCreation"/>
-        <tag name="param" line="27" description="&lt;p&gt;just describes type of wood&lt;/p&gt;" type="string" variable="$wood">
-          <type>string</type>
-        </tag>
-        <tag name="param" line="27" description="&lt;p&gt;variable&lt;/p&gt;" type="null|string" variable="$nails">
-          <type>null</type>
-          <type>string</type>
-        </tag>
-        <tag name="return" line="27" description="default value is 1" type="integer">
-          <type>integer</type>
-        </tag>
-      </docblock>
-      <argument line="0" by_reference="false">
-        <name>$wood</name>
-        <default></default>
-        <type>string</type>
-      </argument>
-      <argument line="0" by_reference="false">
-        <name>$nails</name>
-        <default>null</default>
-        <type>null|string</type>
-      </argument>
-    </function>
-    <parse_markers>
-      <error line="27" code="PPC:ERR-50011">No summary for function \createTable()</error>
-    </parse_markers>
-    <source>eJxNUNtOAyEQfZaEf5gHk2qju+mrrbHGd+uDPzDLznZRFgiXGqP+u8Be2gQCw7lwZnZPtrec1es1Z1A2dFIRtOSFkzZIox/gI/oAWIAKXg0cDm/VQg+99JCX7gxgY2IYHe4vPcCTyOciK9J9JnoTnaBc15wtSUAo9NlUqOiTcNYkTnlrCVZVVQ8nUT9rOaCqUh+r7aXD3qLDAXxwUh/h+suYduxkzNWQh/BtCUwHGbvU6KjU7yzUKJWHEzqJjaJzeEchOp0iZscOowqJpCLlYWzONIviE48E71n94gjD1E5pt4u6DAZERqiQbkrWu/nnxxLnlrMfzq5I9GYCtkuZ6bmaEm3S/Y+zf5wfi0U=</source>
-  </file>
-  <file path="newOne.php" generated-path="newOne.html" hash="341263f745d555dc3517ff635d517fbc" package="FileSuper">
-    <docblock line="0">
-      <description>this file dedicated to global variables</description>
+      <description>Central Router Class for MVC framework.</description>
       <long-description></long-description>
-      <tag name="sourcefile" line="0" description=""/>
-      <tag name="package" line="0" description="FileSuper"/>
-    </docblock>
-    <function namespace="" line="22" package="FileSuper">
-      <name>getRealDog</name>
-      <full_name>\getRealDog()</full_name>
-      <docblock line="22">
-        <description>function always return false.</description>
-        <long-description></long-description>
-        <tag name="package" line="22" description="FileSuper"/>
-        <tag name="param" line="22" description="&lt;p&gt;fake variable, please diregard&lt;/p&gt;" type="string" variable="$var">
-          <type>string</type>
-        </tag>
-        <tag name="return" line="22" description="" type="boolean">
-          <type>boolean</type>
-        </tag>
-        <tag name="link" line="22" description="example of presentation" link="http:\\google.com"/>
-      </docblock>
-      <argument line="0" by_reference="false">
-        <name>$var</name>
-        <default></default>
-        <type>string</type>
-      </argument>
-    </function>
-    <function namespace="" line="50" package="FileSuper">
-      <name>sourceExample</name>
-      <full_name>\sourceExample()</full_name>
-      <docblock line="50">
-        <description>this is very interestin function head.</description>
-        <long-description>this is longer description of this function</long-description>
-        <tag name="package" line="50" description="FileSuper"/>
-        <tag name="source" line="50" description=""/>
-        <tag name="todo" line="50" description="to complete class and write description"/>
-        <tag name="param" line="50" description="&lt;p&gt;var description&lt;/p&gt;" type="string" variable="$var">
-          <type>string</type>
-        </tag>
-        <tag name="return" line="50" description="" type="boolean">
-          <type>boolean</type>
-        </tag>
-      </docblock>
-      <argument line="0" by_reference="false">
-        <name>$var</name>
-        <default></default>
-        <type>string</type>
-      </argument>
-    </function>
-    <markers>
-      <todo line="50">to complete class and write description</todo>
-    </markers>
-    <source>eJx9UsFO3DAQPRMp/zBCHOgKLeLQCxQBassHUKknLrPOxLHW67HGE1KE+u+1SbqbZVdIiRQ7M++9eW++3cUu1tXlYlFXsADtXILWeYKGGmdQqQFlsJ5X6OEFxeHKUyq17/X3iXsxVDrGc0SzRkvwmG9+9ZGkXF/W1Y7ifgJLKi5YODNCmeZ7h04gf+5YCnHqeAAX8o/IohPWXsstnA7a3p3ezDnaPhh1HAD9gK8pt2svAVr0iZY78REFN1shmTdXrGkr4AKiJ0zZCydkUZqxawJbMfsdlHdhDZ1qvH5+tszW09LwBugPbjIIcAtRKFFQLLqmQbYyLelTHv0H2/Mi40tdvdXVyVx1Hu/vnovOBhY6qmiOPHSoD4+9WZ/vg6r0h5hTMi4opJJd6fv9P42GkhEXZ/LPDotu4errexIfVio/LySvBZqyD5oj3UrsCJvlXqnnYEnmjMXAcTenrvn2wdV4Um64LE02PnuuBMZjSoChgUGcHoxwbAHKe1D2ib+jgp9jzJ+F9w9L4Q9I</source>
-  </file>
-  <file path="Animal.php" generated-path="Animal.html" hash="2c0e5025e9f054e69a2eec9509f76893" package="Default">
-    <docblock line="0">
-      <description>This is class heading</description>
-      <long-description>this is class description</long-description>
-      <tag name="filesource" line="0" description=""/>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Model" line="23" package="Model">
+    <class final="false" abstract="false" namespace="Core" line="13" package="Core">
       <extends/>
-      <name>Model</name>
-      <full_name>\Model\Model</full_name>
-      <docblock line="23">
-        <description>Class Model</description>
-        <long-description>This is class that settles animal type</long-description>
-        <tag name="category" line="23" description="AnimalDefiner"/>
-        <tag name="package" line="23" description="Model"/>
+      <name>Router</name>
+      <full_name>\Core\Router</full_name>
+      <docblock line="13">
+        <description>Class Router</description>
+        <long-description></long-description>
+        <tag name="package" line="13" description="Core"/>
       </docblock>
-      <property static="false" visibility="public" namespace="Model" line="27" package="Model">
-        <name>$animal</name>
-        <full_name>\Model\Model::animal</full_name>
-        <default></default>
-        <docblock line="27">
+      <property static="false" visibility="protected" namespace="Core" line="18" package="Core">
+        <name>$routes</name>
+        <full_name>\Core\Router::routes</full_name>
+        <default>array()</default>
+        <docblock line="18">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="27" description="&lt;p&gt;sets animal type (like dog, cat etc...)&lt;/p&gt;" type="string|null" variable="">
-            <type>string</type>
-            <type>null</type>
+          <tag name="var" line="18" description="&lt;p&gt;Assotiative array of routes&lt;/p&gt;" type="array" variable="$routes">
+            <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="true" visibility="public" namespace="Model" line="32" package="Model">
-        <name>$pozer</name>
-        <full_name>\Model\Model::pozer</full_name>
-        <default></default>
-        <docblock line="32">
+      <property static="false" visibility="protected" namespace="Core" line="23" package="Core">
+        <name>$params</name>
+        <full_name>\Core\Router::params</full_name>
+        <default>array()</default>
+        <docblock line="23">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="32" description="" type="string|null" variable="$pozer">
-            <type>string</type>
-            <type>null</type>
+          <tag name="var" line="23" description="&lt;p&gt;Parameters from matched route.&lt;/p&gt;" type="array" variable="$params">
+            <type>array</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Model" line="34" package="Model">
-        <name>__construct</name>
-        <full_name>\Model\Model::__construct()</full_name>
-        <docblock line="34">
-          <description></description>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="31" package="Core">
+        <name>addRoute</name>
+        <full_name>\Core\Router::addRoute()</full_name>
+        <docblock line="31">
+          <description>function that created regEx pattern for routing table.</description>
           <long-description></long-description>
+          <tag name="param" line="31" description="&lt;p&gt;The Route URL&lt;/p&gt;" type="string" variable="$route">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="31" description="&lt;p&gt;Parameters (controllers, actions, etc)&lt;/p&gt;" type="array" variable="$params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="31" description="" type="void">
+            <type>void</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
-          <name>$type</name>
+          <name>$route</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="58" package="Core">
+        <name>getRoutes</name>
+        <full_name>\Core\Router::getRoutes()</full_name>
+        <docblock line="58">
+          <description>Get all routes from routing table</description>
+          <long-description></long-description>
+          <tag name="return" line="58" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="69" package="Core">
+        <name>matchURL</name>
+        <full_name>\Core\Router::matchURL()</full_name>
+        <docblock line="69">
+          <description>Match the url to the routes in the routing table, setting the $params
+property if a url is found in routing table</description>
+          <long-description></long-description>
+          <tag name="param" line="69" description="&lt;p&gt;The route URL&lt;/p&gt;" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="69" description="TRUE if match found OR FALSE otherwise" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="93" package="Core">
+        <name>dispatch</name>
+        <full_name>\Core\Router::dispatch()</full_name>
+        <docblock line="93">
+          <description>method 'dispatch' creates controller object and call for controller object's method</description>
+          <long-description>method dispatch take url and convert it to class name and its method name, then
+creates object based on class name and call its method from created object</long-description>
+          <tag name="param" line="93" description="&lt;p&gt;web path&lt;/p&gt;" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="93" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="123" package="Core">
+        <name>convertToStudlyCaps</name>
+        <full_name>\Core\Router::convertToStudlyCaps()</full_name>
+        <docblock line="123">
+          <description>function converts camel-case to CamelCase.</description>
+          <long-description>used to convert url path to Controller Class name</long-description>
+          <tag name="param" line="123" description="" type="string" variable="$string">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="123" description="returns Controller Class Name" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$string</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="137" package="Core">
+        <name>convertToCamelCase</name>
+        <full_name>\Core\Router::convertToCamelCase()</full_name>
+        <docblock line="137">
+          <description>function converts camel-case to camelCale.</description>
+          <long-description>used to convert url path to Controler Action name (methods)</long-description>
+          <tag name="param" line="137" description="" type="" variable="$string"/>
+          <tag name="return" line="137" description="returns Controller Action (method) name" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$string</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Model" line="44" package="Model">
-        <name>_getAnimal</name>
-        <full_name>\Model\Model::_getAnimal()</full_name>
-        <docblock line="44">
-          <description>returns the name of animal type</description>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="148" package="Core">
+        <name>getParams</name>
+        <full_name>\Core\Router::getParams()</full_name>
+        <docblock line="148">
+          <description>Get the currently matched parameters (controller,action)</description>
           <long-description></long-description>
-          <tag name="return" line="44" description="" type="string">
-            <type>string</type>
+          <tag name="return" line="148" description="$params" type="array">
+            <type>array</type>
           </tag>
         </docblock>
       </method>
     </class>
-    <markers>
-      <fixme line="46">need to fixe it!</fixme>
-    </markers>
-    <parse_markers>
-      <error line="34" code="PPC:ERR-50015">Argument $type is missing from the Docblock of __construct</error>
-      <error line="34" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="32" code="PPC:ERR-50007">No summary for property $pozer</error>
-    </parse_markers>
-    <source>eJx9kT1PwzAQhudEyn84pAwlgmbnG/EhMXRjYKuMc0msurZlXxAF+t+xXadRGJA83Xv3vs+dr25Nb4q8rqoihwpee+HAPy6Zc9Aja4TqghJVmqkNOm6FIaHVseOuFRKdHizHsVYXeZErtkVnGEdY6QblZaiNmQ/RLdaPPnMO6hmBQyLvDUyJLZNAO4NTLGeEnbY7uI/qI7ZCoZ10H71hHU4pkYpPyfBd5FkkykL/B7PgyPrlf9QgZQifJcNCig1Co7sz8NmAxJfL5Wmc9taZGd6l4FAeRvy62b/2pdFfATdNO2Lkp0eTKCaPVGsHxcPhYb3mWnmrgdOiDGSBIeySleG3zm8S9DVENbjs5zQWabAqHBkhfBPodn7jDEbsQ2si/7vrhNQhHb5hcYSp6+eXt9XTBSjEBkhDKz4RBJ0EMdnOgBPo/heOu77K</source>
+    <source>eJzFV99P20gQfg4S/8O0QrJDE6K7x6ahhyLuXkpbAe1LQtHG3pA9jNfa3UC5yP/7zeyu1zZxoEgnnYSwPTvz7Tc/d/PhY7Eq9vdGh4f7e3AIU54bxTI4l2vDFUwzpjUspYKz71NYKnbHH6S6PSLd0f7e/l6OEl2whMNUKj4mUYCytg7ICv5AvVt241QDQtJQg83+Xg//LESPTO6ZAqYUe4QDRSoaTrSWRjAj7rlfkUtwa9YGQXuFkoYnhqfBagKzq/Ez4AVD3zR8pQdHJui0kndwx0yyQhiLctSF7w278JfrPDFC5mBWzECiOCMLxW9Of0LBDO6S29ASuMhvwLBF5jehWCEuaKNoxXkBlyvuAgXfzj+19HZ6EScSEyqzDD8GwCwffOEm6XsAxc0aidxLkdb+rReZSGoHWJrafWNHZND0mnAobb3RCCsn1+jRXUXYSDgnd4vKX6eneJFRyUSjiFSiOT5FDtGmJluONo4svoj0/Tx9V0ZkfFAFboLW89EoGlupR7zD6qWV+TwsWB4TKDDs114rrkAG0DQceNZ9a+mYQu0SEo0/fv1QUzyeseE/w6t3/fmIFhzdhrDivU17EwetcocHhDj/LaD9/96QUKTH6FD/OYfex7Mf8/IXPJv//p84Fayj0Y8IjtznEUQHIxHVSmYl9PDYjYKZ07ma+CImrfJJ5/7FDbAs82PFjYJWl7Z7x3bfzua54cY2j45Dq3i7Fq8uHmc0fnB8cFirjHJGr56UyMNXoDUAzY37xCXvoIPCkVVwZR5BLIFZOEGDfZ2nhNTlnJssYQSRyWW1fWMAeV8WUuL6+bdT2sCOTY/+5Rz+PPl0cQoSOakHofnOSFkzRI5psxAsrFfOEC5uhQtOLnwxTI69o32r3hPL2JaSRasmluWP/91A132v2wD3K8A0HNzyR0S1kj54TcIV+tqFIyaVAGLbgRjMSIyVZS3HfrF0T//wToQB2qjCXigMiqOTWKuyUTM2ll21ggN/JVOIUoHnMW4f+RNHQ93kIBd/47kFDPOSUIHT8bO1HGkPZoFb6BU4FsqtK0oLJfN7rC0QhmrUHeh0MbCLwlRwVjag0swdaEXQs1owjecj1sETBMu0AWPbsTpOnW3noUn0HviCzp7VKw67ysd2FWL2feraVepr4KARxQm0kjyL6rXoarxb3YfxUl6YdZo9Tlmh44aiG3pExMbnmv8U2rQ1qoJsyL642E4g5w/QkMceruct3MDf5u7kFe9tvUB6iunKppjC2OtUG7i+oSTScIlnW+QG3uCqbqgtneGxVwq8S55pXunzZCXh7Zmrj41XLWmyTetAbxqoJeTSuAn15u242aFNXAfbgHCV+QKQ69kaxqJEn6Ufnf5O+cadT2VHK4dS9MHFFqbgDhOMLnVYCLW/LK6pb6jzfB9S4VPRW92a/DS0VWe7uGe7Ufya+9LbYJ8rsI6r8VMv2nXtkEN7+W+sK3wJt4BoGA0gAvxX6Y/byusEf46kNdz4GSyCiZ5CVSexk3XN1ZeSkbhkZK9IBobvxGHaGRe7uab7rbS8Mh8e0GP16zS/lJRG3+7MyXMDqjvyWbIUSpv4lcGmixddXZK1Unjfyx7DL7Ci8zfNwI+ajvtY6/qz415mfyjtvJe17oflv1jInE0=</source>
   </file>
+  <file path="public\index.php" generated-path="public.index.html" hash="f7fb15005443180aabb62cd386c0f6c5" package="Default">
+    <docblock line="0">
+      <description>Front Controller.</description>
+      <long-description>Front controller (public folder)</long-description>
+      <tag name="filesource" line="0" description=""/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <source>eJyVk29r2zAQxl83kO9wlIDsLIveb202KNkfGF3nroPRhKDYl0ZDkTxJZhvG332S7Mpd5xTqFwKdnvvdI9357E25L8cjOp2ORzCFd1pJCxdu0UoI1PMH0TxGISmrreA57JQoUKdB9HbHBRpV6Rz9no5HPTZTleXyLsY1/qy4RiDzOb1QGqkXuGrOC3ntBRMdAnAOEn/BymtWrSZJg4BSYEUBQWbAYG65ktClfd7+cIGXC6cIScmk0mI2KZlmB5OG5FJjzg1CyaxLkCaWfJBFyAxuSX9tcr4gH9QByYywUM8HuCzwN1l7VwOEUhlryOwx5aoNPw9D3VMMOPqf5XXr+EyB1t1z+Jp1D2xo3XIacsTKoJjWvHi1Kl4czWLFgUt6vJB3atD6IQG7R8grrdHNnG+cA7rVjcJkc73Mvi2zW/LlZpl931x/zT5evifrkM93Sax7YDbf32SfQt/TtB6PTuLZHdqrMAdhkE4w3ys4PXPjsDjt9+2kuPGuZOFWHf3UntisZNCWmku70ckQ28MbFAbrCL1UXS96bIsD/zugsR7adF0ruCkF+xMywqOwrXD/1SO77XYlp09/rd8hu6E9nd2OTe/h3keIOd0mF8yY+1SvpjSe934ojUW6XrXSf9F/ARRkZKM=</source>
+  </file>
+  <file path="App\Controllers\Posts.php" generated-path="App.Controllers.Posts.html" hash="34041f895040abeb3caa3fb538df1717" package="Default">
+    <docblock line="0">
+      <description>Posts Controller</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\Controllers" line="13" package="App\Controllers">
+      <extends/>
+      <name>Posts</name>
+      <full_name>\App\Controllers\Posts</full_name>
+      <docblock line="13">
+        <description>Class Posts</description>
+        <long-description></long-description>
+        <tag name="package" line="13" description="App\Controllers"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="18" package="App\Controllers">
+        <name>index</name>
+        <full_name>\App\Controllers\Posts::index()</full_name>
+        <docblock line="18">
+          <description>Show index page.</description>
+          <long-description></long-description>
+          <tag name="return" line="18" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="27" package="App\Controllers">
+        <name>addNew</name>
+        <full_name>\App\Controllers\Posts::addNew()</full_name>
+        <docblock line="27">
+          <description>Show add new Post Page.</description>
+          <long-description></long-description>
+          <tag name="return" line="27" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJyVj7FuwjAQhmdb8jscLLQZ4AFAKoilU4XEymKco4lqfJbtNEiId8eOg4LIxHCD7/7/0+fVl62s4IuiEBwK2JEPHrZkgiOt0aVlmoXgght5Rm+lQthYexhCfpmuD8RWS+8zqHuvY+NP/o5KPVYNcbgKzjoMi719RS3UpsQL2Fif5+3aYWicgX+qy24TEcw2R10rODVGhZpMbn18xksiMlQVwewbtSY4OTr31M0jDKHCzuDp45NZ/BS7xRk5ybIEg21u7N5Ui+UfbF/cpk9uySWHQI4F1SA47QVvd+Icgkg=</source>
+  </file>
+  <package name="App" full_name="App">
+    <package name="Controllers" full_name="App\Controllers"/>
+  </package>
+  <package name="Core" full_name="Core"/>
   <package name="Default" full_name="Default"/>
-  <package name="FileSuper" full_name="FileSuper"/>
-  <package name="Model" full_name="Model"/>
-  <package name="TableCreation" full_name="TableCreation"/>
   <package name="global" full_name="global"/>
-  <namespace name="global" full_name="global"/>
-  <namespace name="Model" full_name="Model"/>
+  <namespace name="App" full_name="App">
+    <namespace name="Controllers" full_name="App\Controllers"/>
+  </namespace>
+  <namespace name="Core" full_name="Core"/>
   <deprecated count="0"/>
 </project>

@@ -1,0 +1,49 @@
+<?php
+/**
+ * Front Controller.
+ * Front controller (public folder)
+ * @filesource
+ */
+
+/**
+ * Routing
+ */
+
+require '../Core/Router.php';
+
+$router = new \Core\Router();
+
+// add routes section $routerObject->addRoute($url,$params)
+// precise patterns
+$router->addRoute('', ['controller'=>'Home','action'=>'index']);
+$router->addRoute('posts',['controller'=>'Posts','action'=>'index']);
+$router->addRoute('posts/new', ['controller'=>'Posts','action'=>'new']);
+
+// route patters
+$router->addRoute('{controller}/{action}');
+$router->addRoute('{controller}/{action}/{id:\d+}');
+$router->addRoute('admin/{controller}/{action}');
+
+//setting the current $url
+$url = $_SERVER['QUERY_STRING'];
+
+if($router->matchURL($url)){
+	$router->getParams();
+	echo "<pre>";
+	echo "params found for current {$url}\n";
+	print_r($router->getParams());
+}else{
+	echo "No route found for {$url} request";
+}
+
+// display routing table
+echo "<pre>";
+echo "\n*******************************\n";
+print_r($router->getRoutes());
+echo "</pre>";
+
+//echo get_class($router);
+//
+//echo "<pre>";
+//print_r($_SERVER);
+//echo "</pre>";
