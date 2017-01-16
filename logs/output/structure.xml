@@ -1,7 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title=" framework " version="2.8.5">
   <partials/>
-  <file path="Core\Router.php" generated-path="Core.Router.html" hash="22c9153d5dbd5bcbd35866d07058468d" package="Default">
+  <file path="Core\Controller.php" generated-path="Core.Controller.html" hash="25bf3295e0957565ff3ce6a363942732" package="Default">
+    <docblock line="0">
+      <description>Base Controller file</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="true" namespace="Core" line="13" package="Core">
+      <extends/>
+      <name>Controller</name>
+      <full_name>\Core\Controller</full_name>
+      <docblock line="13">
+        <description>Class Controller</description>
+        <long-description></long-description>
+        <tag name="package" line="13" description="Core"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Core" line="19" package="Core">
+        <name>$route_params</name>
+        <full_name>\Core\Controller::route_params</full_name>
+        <default>array()</default>
+        <docblock line="19">
+          <description>Parameters from the matched routes</description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="26" package="Core">
+        <name>__construct</name>
+        <full_name>\Core\Controller::__construct()</full_name>
+        <docblock line="26">
+          <description>Controller constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="&lt;p&gt;Parameters from the route&lt;/p&gt;" type="array" variable="$route_params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="26" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$route_params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="41" package="Core">
+        <name>__call</name>
+        <full_name>\Core\Controller::__call()</full_name>
+        <docblock line="41">
+          <description>Magic method called when a non-existent or inaccessible method is
+called on an object of this class. Used to execute before and after
+filter methods on action methods. Action methods need to be named
+with an "Action" suffix, e.g. indexAction, showAction etc.</description>
+          <long-description></long-description>
+          <tag name="param" line="41" description="&lt;p&gt;Method name&lt;/p&gt;" type="string" variable="$name">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="41" description="&lt;p&gt;arguments passed to method&lt;/p&gt;" type="array" variable="$arguments">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="41" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$arguments</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="58" package="Core">
+        <name>before</name>
+        <full_name>\Core\Controller::before()</full_name>
+        <docblock line="58">
+          <description>Before filter - called before an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="58" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="66" package="Core">
+        <name>after</name>
+        <full_name>\Core\Controller::after()</full_name>
+        <docblock line="66">
+          <description>After filter - called after an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="66" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJylVNtq20AQfZbB/zA1gcjGVj4gcRsntE8NFEqfQhCr1UjaVt4Vu6vYJfjfO3vxRY4plL5Ju2fOnJlzpLtPXdONRzez2XgEM3hgBuFRSatV26KGSrToLm7Go/FIsjWajnGH0HjrjvZ1jy0z5qTQH94T9herA/zAwgpjNeMW+Luat/Eo8YwJVX9jmvpZ1AYqrdZgG4Q1s7zBErTqLZqAu39lGpjW7Ld/px5Jp5VFbgl45ZF557gMLOH5hWQnp21OhuVKkrSeW6WzyO0LA/sZ1yV5HhArNdpeS3hVojzq6otWcKh6ya1QEvL80DIdsE8J7JaRXNlGmMXHsykGWDfQ7myoJ1ZTH5LXqBI4o+lK2DQogYFUcoFbYSxKC0qDkIxzNEYULe4rRFxtrCSlTIIqftJOQVXgNAX3MvhhCGAV4BY5aYICKzKb8CWwyjpTHRHFiJ4jvfGEYQPxJIPV4B0kBtoCwaUurBA2wjZOyiSgJ2D6qhLbOWBWZzRJidtwMwfTqE3kRMuDnQNPae1C1nDl6OEpzO2eLxnPdN2vaV8Gjk8djR80Bs3/ZjstNvWt5yfsR9ejD8sgL7sOk1w7qxNRpeE69zaa1GeEeMLpdOopHCyGJ1iSTuHDcglfVl+/f46QxMnIe4M6d9pyP236HPgi3ctA4G2oi8Te4DQeuggmO2wNBnLkjYJJHOQtsu0ofhYq1VM8hHQfXPz2JlmNNveZCrID6+5Cth9CwmKkFvuQHoI3jFb2N18Ov4mDNftdRSfOe6/cxO9a+z38b+e4zGPj3R/qv7X4</source>
+  </file>
+  <file path="Core\Router.php" generated-path="Core.Router.html" hash="f81f70cec616647800a0e9b3b08516de" package="Default">
     <docblock line="0">
       <description>Central Router Class for MVC framework.</description>
       <long-description></long-description>
@@ -16,43 +117,43 @@
         <long-description></long-description>
         <tag name="package" line="13" description="Core"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Core" line="18" package="Core">
+      <property static="false" visibility="protected" namespace="Core" line="19" package="Core">
         <name>$routes</name>
         <full_name>\Core\Router::routes</full_name>
         <default>array()</default>
-        <docblock line="18">
+        <docblock line="19">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="18" description="&lt;p&gt;Assotiative array of routes&lt;/p&gt;" type="array" variable="$routes">
+          <tag name="var" line="19" description="&lt;p&gt;Assotiative array of routes&lt;/p&gt;" type="array" variable="$routes">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="Core" line="23" package="Core">
+      <property static="false" visibility="protected" namespace="Core" line="24" package="Core">
         <name>$params</name>
         <full_name>\Core\Router::params</full_name>
         <default>array()</default>
-        <docblock line="23">
+        <docblock line="24">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="23" description="&lt;p&gt;Parameters from matched route.&lt;/p&gt;" type="array" variable="$params">
+          <tag name="var" line="24" description="&lt;p&gt;Parameters from matched route.&lt;/p&gt;" type="array" variable="$params">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="31" package="Core">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="32" package="Core">
         <name>addRoute</name>
         <full_name>\Core\Router::addRoute()</full_name>
-        <docblock line="31">
+        <docblock line="32">
           <description>function that created regEx pattern for routing table.</description>
           <long-description></long-description>
-          <tag name="param" line="31" description="&lt;p&gt;The Route URL&lt;/p&gt;" type="string" variable="$route">
+          <tag name="param" line="32" description="&lt;p&gt;The Route URL&lt;/p&gt;" type="string" variable="$route">
             <type>string</type>
           </tag>
-          <tag name="param" line="31" description="&lt;p&gt;Parameters (controllers, actions, etc)&lt;/p&gt;" type="array" variable="$params">
+          <tag name="param" line="32" description="&lt;p&gt;Parameters (controllers, actions, etc)&lt;/p&gt;" type="array" variable="$params">
             <type>array</type>
           </tag>
-          <tag name="return" line="31" description="" type="void">
+          <tag name="return" line="32" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -67,28 +168,28 @@
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="58" package="Core">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="59" package="Core">
         <name>getRoutes</name>
         <full_name>\Core\Router::getRoutes()</full_name>
-        <docblock line="58">
+        <docblock line="59">
           <description>Get all routes from routing table</description>
           <long-description></long-description>
-          <tag name="return" line="58" description="" type="array">
+          <tag name="return" line="59" description="" type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="69" package="Core">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="70" package="Core">
         <name>matchURL</name>
         <full_name>\Core\Router::matchURL()</full_name>
-        <docblock line="69">
+        <docblock line="70">
           <description>Match the url to the routes in the routing table, setting the $params
 property if a url is found in routing table</description>
           <long-description></long-description>
-          <tag name="param" line="69" description="&lt;p&gt;The route URL&lt;/p&gt;" type="string" variable="$url">
+          <tag name="param" line="70" description="&lt;p&gt;The route URL&lt;/p&gt;" type="string" variable="$url">
             <type>string</type>
           </tag>
-          <tag name="return" line="69" description="TRUE if match found OR FALSE otherwise" type="boolean">
+          <tag name="return" line="70" description="TRUE if match found OR FALSE otherwise" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -98,17 +199,17 @@ property if a url is found in routing table</description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="93" package="Core">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="94" package="Core">
         <name>dispatch</name>
         <full_name>\Core\Router::dispatch()</full_name>
-        <docblock line="93">
+        <docblock line="94">
           <description>method 'dispatch' creates controller object and call for controller object's method</description>
           <long-description>method dispatch take url and convert it to class name and its method name, then
 creates object based on class name and call its method from created object</long-description>
-          <tag name="param" line="93" description="&lt;p&gt;web path&lt;/p&gt;" type="string" variable="$url">
+          <tag name="param" line="94" description="&lt;p&gt;web path&lt;/p&gt;" type="string" variable="$url">
             <type>string</type>
           </tag>
-          <tag name="return" line="93" description="" type="void">
+          <tag name="return" line="94" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -118,16 +219,16 @@ creates object based on class name and call its method from created object</long
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="123" package="Core">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="127" package="Core">
         <name>convertToStudlyCaps</name>
         <full_name>\Core\Router::convertToStudlyCaps()</full_name>
-        <docblock line="123">
+        <docblock line="127">
           <description>function converts camel-case to CamelCase.</description>
           <long-description>used to convert url path to Controller Class name</long-description>
-          <tag name="param" line="123" description="" type="string" variable="$string">
+          <tag name="param" line="127" description="" type="string" variable="$string">
             <type>string</type>
           </tag>
-          <tag name="return" line="123" description="returns Controller Class Name" type="string">
+          <tag name="return" line="127" description="returns Controller Class Name" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -137,14 +238,14 @@ creates object based on class name and call its method from created object</long
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="137" package="Core">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="141" package="Core">
         <name>convertToCamelCase</name>
         <full_name>\Core\Router::convertToCamelCase()</full_name>
-        <docblock line="137">
+        <docblock line="141">
           <description>function converts camel-case to camelCale.</description>
           <long-description>used to convert url path to Controler Action name (methods)</long-description>
-          <tag name="param" line="137" description="" type="" variable="$string"/>
-          <tag name="return" line="137" description="returns Controller Action (method) name" type="string">
+          <tag name="param" line="141" description="" type="" variable="$string"/>
+          <tag name="return" line="141" description="returns Controller Action (method) name" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -154,47 +255,94 @@ creates object based on class name and call its method from created object</long
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="148" package="Core">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="172" package="Core">
+        <name>removeQueryStringVariables</name>
+        <full_name>\Core\Router::removeQueryStringVariables()</full_name>
+        <docblock line="172">
+          <description>Remove the query string variables from the URL (if any).</description>
+          <long-description>As the full query string is used for the route, any variables at the end will need
+to be removed before the route is matched to the routing table. For
+example:
+
+  URL                           $_SERVER['QUERY_STRING']  Route
+  -------------------------------------------------------------------
+  localhost                     ''                        ''
+  localhost/?                   ''                        ''
+  localhost/?page=1             page=1                    ''
+  localhost/posts?page=1        posts&amp;page=1              posts
+  localhost/posts/index         posts/index               posts/index
+  localhost/posts/index?page=1  posts/index&amp;page=1        posts/index
+
+A URL of the format localhost/?page (one variable name, no value) won't
+work however. (NB. The .htaccess file converts the first ? to a &amp; when
+it's passed through to the $_SERVER variable).</long-description>
+          <tag name="param" line="172" description="&lt;p&gt;The full URL&lt;/p&gt;" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="172" description="The URL with the query string variables removed" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="191" package="Core">
         <name>getParams</name>
         <full_name>\Core\Router::getParams()</full_name>
-        <docblock line="148">
+        <docblock line="191">
           <description>Get the currently matched parameters (controller,action)</description>
           <long-description></long-description>
-          <tag name="return" line="148" description="$params" type="array">
+          <tag name="return" line="191" description="$params" type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
     </class>
-    <source>eJzFV99P20gQfg4S/8O0QrJDE6K7x6ahhyLuXkpbAe1LQtHG3pA9jNfa3UC5yP/7zeyu1zZxoEgnnYSwPTvz7Tc/d/PhY7Eq9vdGh4f7e3AIU54bxTI4l2vDFUwzpjUspYKz71NYKnbHH6S6PSLd0f7e/l6OEl2whMNUKj4mUYCytg7ICv5AvVt241QDQtJQg83+Xg//LESPTO6ZAqYUe4QDRSoaTrSWRjAj7rlfkUtwa9YGQXuFkoYnhqfBagKzq/Ez4AVD3zR8pQdHJui0kndwx0yyQhiLctSF7w278JfrPDFC5mBWzECiOCMLxW9Of0LBDO6S29ASuMhvwLBF5jehWCEuaKNoxXkBlyvuAgXfzj+19HZ6EScSEyqzDD8GwCwffOEm6XsAxc0aidxLkdb+rReZSGoHWJrafWNHZND0mnAobb3RCCsn1+jRXUXYSDgnd4vKX6eneJFRyUSjiFSiOT5FDtGmJluONo4svoj0/Tx9V0ZkfFAFboLW89EoGlupR7zD6qWV+TwsWB4TKDDs114rrkAG0DQceNZ9a+mYQu0SEo0/fv1QUzyeseE/w6t3/fmIFhzdhrDivU17EwetcocHhDj/LaD9/96QUKTH6FD/OYfex7Mf8/IXPJv//p84Fayj0Y8IjtznEUQHIxHVSmYl9PDYjYKZ07ma+CImrfJJ5/7FDbAs82PFjYJWl7Z7x3bfzua54cY2j45Dq3i7Fq8uHmc0fnB8cFirjHJGr56UyMNXoDUAzY37xCXvoIPCkVVwZR5BLIFZOEGDfZ2nhNTlnJssYQSRyWW1fWMAeV8WUuL6+bdT2sCOTY/+5Rz+PPl0cQoSOakHofnOSFkzRI5psxAsrFfOEC5uhQtOLnwxTI69o32r3hPL2JaSRasmluWP/91A132v2wD3K8A0HNzyR0S1kj54TcIV+tqFIyaVAGLbgRjMSIyVZS3HfrF0T//wToQB2qjCXigMiqOTWKuyUTM2ll21ggN/JVOIUoHnMW4f+RNHQ93kIBd/47kFDPOSUIHT8bO1HGkPZoFb6BU4FsqtK0oLJfN7rC0QhmrUHeh0MbCLwlRwVjag0swdaEXQs1owjecj1sETBMu0AWPbsTpOnW3noUn0HviCzp7VKw67ysd2FWL2feraVepr4KARxQm0kjyL6rXoarxb3YfxUl6YdZo9Tlmh44aiG3pExMbnmv8U2rQ1qoJsyL642E4g5w/QkMceruct3MDf5u7kFe9tvUB6iunKppjC2OtUG7i+oSTScIlnW+QG3uCqbqgtneGxVwq8S55pXunzZCXh7Zmrj41XLWmyTetAbxqoJeTSuAn15u242aFNXAfbgHCV+QKQ69kaxqJEn6Ufnf5O+cadT2VHK4dS9MHFFqbgDhOMLnVYCLW/LK6pb6jzfB9S4VPRW92a/DS0VWe7uGe7Ufya+9LbYJ8rsI6r8VMv2nXtkEN7+W+sK3wJt4BoGA0gAvxX6Y/byusEf46kNdz4GSyCiZ5CVSexk3XN1ZeSkbhkZK9IBobvxGHaGRe7uab7rbS8Mh8e0GP16zS/lJRG3+7MyXMDqjvyWbIUSpv4lcGmixddXZK1Unjfyx7DL7Ci8zfNwI+ajvtY6/qz415mfyjtvJe17oflv1jInE0=</source>
+    <source>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</source>
   </file>
-  <file path="public\index.php" generated-path="public.index.html" hash="f7fb15005443180aabb62cd386c0f6c5" package="Default">
+  <file path="public\index.php" generated-path="public.index.html" hash="b50a4ffc83e8a3e8531d376d22577d1f" package="Default">
     <docblock line="0">
       <description>Front Controller.</description>
       <long-description>Front controller (public folder)</long-description>
       <tag name="filesource" line="0" description=""/>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <source>eJyVk29r2zAQxl83kO9wlIDsLIveb202KNkfGF3nroPRhKDYl0ZDkTxJZhvG332S7Mpd5xTqFwKdnvvdI9357E25L8cjOp2ORzCFd1pJCxdu0UoI1PMH0TxGISmrreA57JQoUKdB9HbHBRpV6Rz9no5HPTZTleXyLsY1/qy4RiDzOb1QGqkXuGrOC3ntBRMdAnAOEn/BymtWrSZJg4BSYEUBQWbAYG65ktClfd7+cIGXC6cIScmk0mI2KZlmB5OG5FJjzg1CyaxLkCaWfJBFyAxuSX9tcr4gH9QByYywUM8HuCzwN1l7VwOEUhlryOwx5aoNPw9D3VMMOPqf5XXr+EyB1t1z+Jp1D2xo3XIacsTKoJjWvHi1Kl4czWLFgUt6vJB3atD6IQG7R8grrdHNnG+cA7rVjcJkc73Mvi2zW/LlZpl931x/zT5evifrkM93Sax7YDbf32SfQt/TtB6PTuLZHdqrMAdhkE4w3ys4PXPjsDjt9+2kuPGuZOFWHf3UntisZNCWmku70ckQ28MbFAbrCL1UXS96bIsD/zugsR7adF0ruCkF+xMywqOwrXD/1SO77XYlp09/rd8hu6E9nd2OTe/h3keIOd0mF8yY+1SvpjSe934ojUW6XrXSf9F/ARRkZKM=</source>
+    <source>eJyFU2Fv0zAQ/dxI/Q/WVMlp6ZrvsBXQKDAJDcgYElqmyI2vrZFrB9sZoCr/nbOdppUorJUs5e7de3f37IuX9aYeJtlkMkzIhLw1WjlyhYfRUoKZHUWrPkrSullKUZGVlhzMOIBerYQEqxtTgf/OhsmB9nXjtNSM94SNqpzQirgNc4R1WUsCRQx6NSaUJQZ+NGAdcHIlmbVEsS3YqFgzw7bEOiPUmoyqkK56UMQYcI1R5FEL3rVla1nuJUsDa4HkJl11LaWRZ7wbJoOR0dqRS8KF8YRpWb65zsty/MLnfK+YC5gZzegM+0C6WrIKUloUdEowOu36Gs/oDDdNfalYpcIilHG2lJAGpnEQHPhhhQESYh7bDpPW6w0TFGqwUZRU8BMtMlDkIZLGfJYRxjkJKEssxAV3VR+X3zFwPkdEKEpHjZHTUVigHYfi2kAlLJCaOSxQtlc8qqI4zz09XAR6Oafv9RbolLKg5wNCcfhFH/quAktHe5p1d2Bss11kaqkneBIs+POCP3u6ivGtUNm/hXynFpzzN8ltgFSNMYCX3u8JCfH0Xpe3i/zrIr+nn+8W+bfy9kt+ffOOPhz7cz7nwuKw1SbseM+NnveArc/e5R8iwBufZYM+uwb3KdgSfMUMVBtNzi7Qn/nZcSSah2+wURxP0/e887xtoTp0jc/DlSY9pRAlWpAWdkfUN7pz7UAeSfevMVK3frbDH732s0v2O1SHVfob7jN/DREDhZr8/7ef4tQQwdp+iE4h20v0MUSW4Q3uiyP+ZFe9TOf0Keo/IKKaeg==</source>
   </file>
-  <file path="App\Controllers\Posts.php" generated-path="App.Controllers.Posts.html" hash="34041f895040abeb3caa3fb538df1717" package="Default">
+  <file path="App\Controllers\Posts.php" generated-path="App.Controllers.Posts.html" hash="81e0043307a512441e24a881c29f9389" package="Default">
     <docblock line="0">
       <description>Posts Controller</description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="App\Controllers" line="13" package="App\Controllers">
-      <extends/>
+    <class final="false" abstract="false" namespace="App\Controllers" line="12" package="App\Controllers">
+      <extends>\Core\Controller</extends>
       <name>Posts</name>
       <full_name>\App\Controllers\Posts</full_name>
-      <docblock line="13">
+      <docblock line="12">
         <description>Class Posts</description>
         <long-description></long-description>
-        <tag name="package" line="13" description="App\Controllers"/>
+        <tag name="package" line="12" description="App\Controllers"/>
+        <tag name="inherited_from" description="\Core\Controller" refers="\Core\Controller" link="/classes/Core.Controller.html"/>
       </docblock>
+      <property static="false" visibility="protected" namespace="App\Controllers" line="19" package="Core">
+        <name>$route_params</name>
+        <full_name>\Core\Controller::route_params</full_name>
+        <default>array()</default>
+        <docblock line="19">
+          <description>Parameters from the matched routes</description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="18" package="App\Controllers">
-        <name>index</name>
-        <full_name>\App\Controllers\Posts::index()</full_name>
+        <name>indexAction</name>
+        <full_name>\App\Controllers\Posts::indexAction()</full_name>
         <docblock line="18">
           <description>Show index page.</description>
           <long-description></long-description>
@@ -204,8 +352,8 @@ creates object based on class name and call its method from created object</long
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="27" package="App\Controllers">
-        <name>addNew</name>
-        <full_name>\App\Controllers\Posts::addNew()</full_name>
+        <name>addNewAction</name>
+        <full_name>\App\Controllers\Posts::addNewAction()</full_name>
         <docblock line="27">
           <description>Show add new Post Page.</description>
           <long-description></long-description>
@@ -214,8 +362,235 @@ creates object based on class name and call its method from created object</long
           </tag>
         </docblock>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="36" package="App\Controllers">
+        <name>editAction</name>
+        <full_name>\App\Controllers\Posts::editAction()</full_name>
+        <docblock line="36">
+          <description>Show the edit page.</description>
+          <long-description></long-description>
+          <tag name="return" line="36" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="26" package="Core">
+        <name>__construct</name>
+        <full_name>\Core\Controller::__construct()</full_name>
+        <docblock line="26">
+          <description>Controller constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="&lt;p&gt;Parameters from the route&lt;/p&gt;" type="array" variable="$route_params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="26" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$route_params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="41" package="Core">
+        <name>__call</name>
+        <full_name>\Core\Controller::__call()</full_name>
+        <docblock line="41">
+          <description>Magic method called when a non-existent or inaccessible method is
+called on an object of this class. Used to execute before and after
+filter methods on action methods. Action methods need to be named
+with an "Action" suffix, e.g. indexAction, showAction etc.</description>
+          <long-description></long-description>
+          <tag name="param" line="41" description="&lt;p&gt;Method name&lt;/p&gt;" type="string" variable="$name">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="41" description="&lt;p&gt;arguments passed to method&lt;/p&gt;" type="array" variable="$arguments">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="41" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$arguments</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="58" package="Core">
+        <name>before</name>
+        <full_name>\Core\Controller::before()</full_name>
+        <docblock line="58">
+          <description>Before filter - called before an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="58" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="66" package="Core">
+        <name>after</name>
+        <full_name>\Core\Controller::after()</full_name>
+        <docblock line="66">
+          <description>After filter - called after an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="66" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
     </class>
-    <source>eJyVj7FuwjAQhmdb8jscLLQZ4AFAKoilU4XEymKco4lqfJbtNEiId8eOg4LIxHCD7/7/0+fVl62s4IuiEBwK2JEPHrZkgiOt0aVlmoXgght5Rm+lQthYexhCfpmuD8RWS+8zqHuvY+NP/o5KPVYNcbgKzjoMi719RS3UpsQL2Fif5+3aYWicgX+qy24TEcw2R10rODVGhZpMbn18xksiMlQVwewbtSY4OTr31M0jDKHCzuDp45NZ/BS7xRk5ybIEg21u7N5Ui+UfbF/cpk9uySWHQI4F1SA47QVvd+Icgkg=</source>
+    <source>eJyVklFrwjAUhZ9b6H+4KwO1sPm+ibP4sqch26sgWXpdwmISknQVhv99Saq0o/XBh0J77zknXw9ZvGims3ReFFkKBWyUdRbWSjqjhEAThvMszVJJDmg1oQil1ttOYJ/D9mJfC2JtGxK/V97xTb4GpnMs7eSAR4eysuBlBrd9gt8sTeIBiU/8YKoBLis8gvbBj+10ZdDVRsKP4lWc+PBE15+CU9jXkjquZOsq4/t05vchN0HKFExeUQgFe6MO5+zyYgHHMBL2Srmb+J9OTv4ZkJGqAolN69jcCOjNb9iMEuY9wkDUSoEMMWmHmV/FDGqsuLu5w2Aar3ChDS5jMUPieNQIa1fpVuY967uqHXo24y+d89fl6d+auYOwGikngjJi7FQbLt3OTO8d4/ZhaYJ7F912Njt3cPoDGQLfYw==</source>
+  </file>
+  <file path="App\Controllers\Home.php" generated-path="App.Controllers.Home.html" hash="89eb9e2fb268a7b5ecb5b39ef4d22f38" package="Default">
+    <docblock line="0">
+      <description>Home controller</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\Controllers" line="13" package="App\Controllers">
+      <extends>\Core\Controller</extends>
+      <name>Home</name>
+      <full_name>\App\Controllers\Home</full_name>
+      <docblock line="13">
+        <description>Class Home</description>
+        <long-description></long-description>
+        <tag name="package" line="13" description="App\Controllers"/>
+        <tag name="inherited_from" description="\Core\Controller" refers="\Core\Controller" link="/classes/Core.Controller.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="App\Controllers" line="19" package="Core">
+        <name>$route_params</name>
+        <full_name>\Core\Controller::route_params</full_name>
+        <default>array()</default>
+        <docblock line="19">
+          <description>Parameters from the matched routes</description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="19" package="App\Controllers">
+        <name>indexAction</name>
+        <full_name>\App\Controllers\Home::indexAction()</full_name>
+        <docblock line="19">
+          <description>Show index page for Home controller.</description>
+          <long-description></long-description>
+          <tag name="return" line="19" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="31" package="App\Controllers">
+        <name>before</name>
+        <full_name>\App\Controllers\Home::before()</full_name>
+        <docblock line="31">
+          <description>Before filter.</description>
+          <long-description></long-description>
+          <tag name="return" line="31" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="inherited_from" description="\Core\Controller::before()" refers="\Core\Controller::before()" link="/classes/Core.Controller.html#method_before"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="40" package="App\Controllers">
+        <name>after</name>
+        <full_name>\App\Controllers\Home::after()</full_name>
+        <docblock line="40">
+          <description>After filter</description>
+          <long-description></long-description>
+          <tag name="return" line="40" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="inherited_from" description="\Core\Controller::after()" refers="\Core\Controller::after()" link="/classes/Core.Controller.html#method_after"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="26" package="Core">
+        <name>__construct</name>
+        <full_name>\Core\Controller::__construct()</full_name>
+        <docblock line="26">
+          <description>Controller constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="&lt;p&gt;Parameters from the route&lt;/p&gt;" type="array" variable="$route_params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="26" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$route_params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="41" package="Core">
+        <name>__call</name>
+        <full_name>\Core\Controller::__call()</full_name>
+        <docblock line="41">
+          <description>Magic method called when a non-existent or inaccessible method is
+called on an object of this class. Used to execute before and after
+filter methods on action methods. Action methods need to be named
+with an "Action" suffix, e.g. indexAction, showAction etc.</description>
+          <long-description></long-description>
+          <tag name="param" line="41" description="&lt;p&gt;Method name&lt;/p&gt;" type="string" variable="$name">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="41" description="&lt;p&gt;arguments passed to method&lt;/p&gt;" type="array" variable="$arguments">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="41" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$arguments</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="58" package="Core">
+        <name>before</name>
+        <full_name>\Core\Controller::before()</full_name>
+        <docblock line="58">
+          <description>Before filter - called before an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="58" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="66" package="Core">
+        <name>after</name>
+        <full_name>\Core\Controller::after()</full_name>
+        <docblock line="66">
+          <description>After filter - called after an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="66" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+    </class>
+    <source>eJyVkFFLwzAUhZ9b6H+4DqHtHty7G7o5xL2KPgojS2/XYJqEm1Qnsv9umm5d2QTxoZCenHO+3Du7N5VJ4sl4nMQwhpWuEbhWjrSUSK02SeIkVqxGaxhHWBjztuwNdtreHtNLyawNHeF37gPvbHuR6Vt57wfcOVSFBe8jHJiT+DuJowCIfOVLpT9BqAJ3YNrmUtP5m28655zQNaTgQ4siKJ4YmWYjBYeyUdwJrbqmRThneQuKkFca0hVKqaEkXR9g7Og/p12l0z42mhnCu9FAeG6QvsA6EmrrH0x+i84v4LbzVK6W1iAXTPKKkc2M97k1Zdfrp8fXPB82T/rqvf+GK3lAvwS/CSHdH8OTdsgdFqf5NyGb5f52MH3WyXn6G25ResyB9j8Ya5MXrKD2qP0P4gi9Hw==</source>
   </file>
   <package name="App" full_name="App">
     <package name="Controllers" full_name="App\Controllers"/>

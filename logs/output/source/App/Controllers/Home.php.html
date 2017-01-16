@@ -36,45 +36,46 @@
     <body>
         <pre class="brush: php">&lt;?php
 /**
- * Posts Controller
+ * Home controller
  */
 
 namespace App\Controllers;
 
 /**
- * Class Posts
+ * Class Home
  * @package App\Controllers
  */
-class Posts extends \Core\Controller
+
+class Home extends \Core\Controller
 {
 	/**
-	 * Show index page.
+	 * Show index page for Home controller.
 	 * @return void
 	 */
-	public function indexAction()
-	{
-		echo 'Hello from index Action in the Post Controller!';
+	public function indexAction(){
+		echo 'Hello from index action in Home controller!';
+		echo &quot;&lt;pre&gt;&quot;;
+		echo &quot;Query string parameters:&quot;;
+		htmlspecialchars(print_r($_GET));
+		echo &quot;&lt;/pre&gt;&quot;;
 	}
 	
 	/**
-	 * Show add new Post Page.
+	 * Before filter.
 	 * @return void
 	 */
-	public function addNewAction()
+	protected function before()
 	{
-		echo &quot;Hello from the addNew action in the Post controller!&quot;;
+		echo '(before)';
 	}
 	
 	/**
-	 * Show the edit page.
+	 * After filter
 	 * @return void
 	 */
-	public function editAction()
+	protected function after()
 	{
-		echo '&lt;pre&gt;';
-		echo &quot;Hello from edit action in the Post Controller\n&quot;;
-		echo &quot;Route parameters:\n&quot;;
-		echo htmlspecialchars(print_r($this-&gt;route_params));
+		echo '(after)';
 	}
 }</pre>
         <script type="text/javascript">

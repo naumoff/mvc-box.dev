@@ -36,66 +36,73 @@
     <body>
         <pre class="brush: php">&lt;?php
 /**
- * Front Controller.
- * Front controller (public folder)
- * @filesource
+ * Base Controller file
  */
+
+namespace Core;
 
 /**
- * Autoloader.
- * Function that autoloads files that contains requested Class names
- * @param string $class class name
- * @return void
+ * Class Controller
+ * @package Core
  */
-spl_autoload_register(function($class){
-	$root = dirname(__DIR__);
-	$file = $root.'/'.str_replace('\\', '/', $class).'.php';
-	if(is_readable($file)){
-		require $file;
+
+abstract class Controller
+{
+	/**
+	 * Parameters from the matched routes
+	 * @var array
+	 */
+	protected $route_params = [];
+	
+	/**
+	 * Controller constructor.
+	 * @param array $route_params Parameters from the route
+	 * @return void
+	 */
+	public function __construct($route_params)
+	{
+		$this-&gt;route_params = $route_params;
 	}
-});
-
-$router = new Core\Router();
-
-// add routes section $routerObject-&gt;addRoute($url,$params)
-// precise patterns
-$router-&gt;addRoute('', ['controller'=&gt;'Home','action'=&gt;'index']);
-
-// route patters
-$router-&gt;addRoute('{controller}/{action}');
-$router-&gt;addRoute('{controller}/{id:\d+}/{action}');
-$router-&gt;addRoute('admin/{controller}/{action}');
-
-//setting the current $url
-$url = $_SERVER['QUERY_STRING'];
-
-$router-&gt;dispatch($url);
-
-//if($router-&gt;matchURL($url)){
-//	$router-&gt;getParams();
-//	echo &quot;&lt;pre&gt;&quot;;
-//	echo &quot;params found for current {$url}\n&quot;;
-//	print_r($router-&gt;getParams());
-//}else{
-//	echo &quot;No route found for {$url} request&quot;;
-//}
-
-
-
-
-
-
-// display routing table
-//echo &quot;&lt;pre&gt;&quot;;
-//echo &quot;\n*******************************\n&quot;;
-//print_r($router-&gt;getRoutes());
-//echo &quot;&lt;/pre&gt;&quot;;
-
-//echo get_class($router);
-//
-//echo &quot;&lt;pre&gt;&quot;;
-//print_r($_SERVER);
-//echo &quot;&lt;/pre&gt;&quot;;</pre>
+	
+	/**
+	 * Magic method called when a non-existent or inaccessible method is
+	 * called on an object of this class. Used to execute before and after
+	 * filter methods on action methods. Action methods need to be named
+	 * with an &quot;Action&quot; suffix, e.g. indexAction, showAction etc.
+	 *
+	 * @param string $name Method name
+	 * @param array $arguments arguments passed to method
+	 * @return void
+	 */
+	public function __call($name, $arguments)
+	{
+		$method = $name.'Action';
+		if(method_exists($this, $method)){
+			if($this-&gt;before() !== FALSE){
+				call_user_func_array([$this,$method], $arguments);
+				$this-&gt;after();
+			}
+		}else{
+			echo &quot;method {$method} not found in controller&quot;.get_class($this);
+		}
+	}
+	
+	/**
+	 * Before filter - called before an action method.
+	 * @return void
+	 */
+	protected function before()
+	{
+	}
+	
+	/**
+	 * After filter - called after an action method.
+	 * @return void
+	 */
+	protected function after()
+	{
+	}
+}</pre>
         <script type="text/javascript">
              SyntaxHighlighter.all();
              jQuery('.gutter div').each(function(key, data){

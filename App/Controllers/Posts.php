@@ -1,7 +1,6 @@
 <?php
 /**
  * Posts Controller
- *
  */
 
 namespace App\Controllers;
@@ -10,12 +9,13 @@ namespace App\Controllers;
  * Class Posts
  * @package App\Controllers
  */
-class Posts {
+class Posts extends \Core\Controller
+{
 	/**
 	 * Show index page.
 	 * @return void
 	 */
-	public function index()
+	public function indexAction()
 	{
 		echo 'Hello from index Action in the Post Controller!';
 	}
@@ -24,8 +24,20 @@ class Posts {
 	 * Show add new Post Page.
 	 * @return void
 	 */
-	public function addNew()
+	public function addNewAction()
 	{
 		echo "Hello from the addNew action in the Post controller!";
+	}
+	
+	/**
+	 * Show the edit page.
+	 * @return void
+	 */
+	public function editAction()
+	{
+		echo '<pre>';
+		echo "Hello from edit action in the Post Controller\n";
+		echo "Route parameters:\n";
+		echo htmlspecialchars(print_r($this->route_params));
 	}
 }
